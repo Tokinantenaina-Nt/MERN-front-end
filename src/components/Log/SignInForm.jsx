@@ -6,8 +6,7 @@ const SignInForm = () => {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const apiUrl = import.meta.env.VITE_API_URL;
-  const url = `${apiUrl}api/user/login`;
+  const url = `${import.meta.env.VITE_API_URL}api/user/login`;
 
   const handleLogin = async e => {
     e.preventDefault();
@@ -22,10 +21,8 @@ const SignInForm = () => {
           withCredentials: true
         }
       );
-      // Si la requête est réussie, redirigez l'utilisateur ou effectuez une autre action en conséquence
       window.location = "/";
     } catch (error) {
-      // Si la requête échoue, affichez les erreurs
       if (error.response && error.response.data) {
         const { errors } = error.response.data;
         if (errors) {
