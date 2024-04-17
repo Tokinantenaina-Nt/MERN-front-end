@@ -15,7 +15,7 @@ const App = () => {
         withCredentials: true
       })
         .then(res => {
-          console.log(res), setUid(res.data);
+          setUid(res.data);
         })
         .catch(err => {
           console.log(err);
