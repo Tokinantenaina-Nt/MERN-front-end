@@ -75,7 +75,7 @@ const SignUpForm = () => {
           <input
             type="text"
             name="email"
-            id="username"
+            id="email"
             onChange={e => {
               setEmail(e.target.value);
             }}

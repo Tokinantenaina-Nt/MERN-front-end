@@ -4,6 +4,7 @@ import Home from "../../pages/Home";
 import Trending from "../../pages/Trending";
 import Profil from "../../pages/Profil";
 import Navbar from "../Navbar";
+import LeftNav from "../LeftNav";
 
 const App = () => {
   return (
