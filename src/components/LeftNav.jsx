@@ -16,7 +16,9 @@ const LeftNav = () => {
             <br />
             <NavLink
               to="/trending"
-              className={({ isActive }) => (isActive ? "active-left-nav" : "")}
+              className={({ isActive }) =>
+                isActive ? "active-left-nav" : { display: "none" }
+              }
             >
               <img src="./img/icons/rocket.svg" alt="trending" />
             </NavLink>

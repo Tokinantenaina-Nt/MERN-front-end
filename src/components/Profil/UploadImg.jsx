@@ -9,13 +9,19 @@ const UploadImg = () => {
   const handlepicture = e => {
     e.preventDefault();
 
+    if (!file) {
+      console.error("Aucun fichier sélectionné");
+      return;
+    }
+
     const data = new FormData();
-    data.append("name", userData.userName);
+    data.append("name", userData.username);
     data.append("userId", userData._id);
     data.append("file", file);
 
     dispatch(uploadPicture(data, userData._id));
   };
+  if (!userData) return null;
   return (
     <form action="" onSubmit={handlepicture} className="upload-pic">
       <label htmlFor="file">Changer d'image</label>
@@ -23,8 +29,8 @@ const UploadImg = () => {
         type="file"
         id="file"
         name="file"
-        accept=".jpg, jpeg, .png"
-        onChange={e => setFile(e.target.file[0])}
+        accept=".jpg, .jpeg, .png"
+        onChange={e => setFile(e.target.files[0])}
       />
       <br />
       <input type="submit" value="Envoyer" />

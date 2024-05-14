@@ -245,6 +245,11 @@
           }
           span {
             transform: translateX(6px);
+            img {
+              box-shadow: none;
+              height: 15px;
+              width: 15px;
+            }
           }
         }
 
