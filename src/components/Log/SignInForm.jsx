@@ -11,7 +11,7 @@ const SignInForm = () => {
   const handleLogin = async e => {
     e.preventDefault();
     try {
-      const response = await axios.post(
+      await axios.post(
         url,
         {
           email,

@@ -9,7 +9,7 @@ const Logout = () => {
     await axios({
       method: "get",
       url: `${import.meta.env.VITE_API_URL}api/user/logout`,
-      withCredentials: true
+      credentials: "include"
     })
       .then(() => removeCookie("jwt"))
       .catch(err => console.log(err));
