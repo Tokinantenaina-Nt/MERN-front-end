@@ -17,9 +17,7 @@ const SignInForm = () => {
           email,
           password
         },
-        {
-          withCredentials: true
-        }
+        { withCredentials: true }
       );
       window.location = "/";
     } catch (error) {
